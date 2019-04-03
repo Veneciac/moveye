@@ -21,6 +21,10 @@ export function getMovies (page = 1) {
 
 export function getDetail (id) {
     return dispatch => {
+        dispatch({
+            type: 'SET_DETAIL_MOVIE',
+            data: {}
+        })
         axios({
             method: 'get',
             url: `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
@@ -39,12 +43,16 @@ export function getDetail (id) {
 
 export function getSimilar (id, page = 1) {
     return dispatch => {
+        dispatch({
+            type: 'SET_SIMILAR',
+            data: []
+        })
         axios({
             method: 'get',
             url: `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&page=${page}`
         })
         .then(({ data }) => {
-            console.log(data)
+            // console.log(data)
             dispatch({
                 type: 'SET_SIMILAR',
                 data: data.results

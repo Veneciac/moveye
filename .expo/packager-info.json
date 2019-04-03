@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 11727,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": "https://yw-y6y.anonymous.moveye.exp.direct",
   "packagerNgrokUrl": "https://packager.yw-y6y.anonymous.moveye.exp.direct",
-  "ngrokPid": 11747,
+  "ngrokPid": 14620,
   "webpackServerPort": null
 }

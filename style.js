@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
    home: {
        backgroundColor: 'black',
        minHeight: win.height,
+       flex: 1,
+       flexDirection: 'column'
    },
    textWhite: {
        color: 'white'
@@ -24,6 +26,10 @@ const styles = StyleSheet.create({
    detailImg: {
        width: win.width,
        height: win.height - 150
+   },
+   sliding: {
+    width: win.width,
+    height: 230,
    }
 })
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, Dimensions } from 'react-native'
 import s from '../style'
 import { Spinner } from 'native-base'
+let width = 300
+
 export default class MovieCard extends Component {
     state = {
         loaded: false,
@@ -12,7 +14,7 @@ export default class MovieCard extends Component {
     }
 
     loadImg = (movie) => {
-        return (<Image onLoad={this._onLoad} resizeMode="contain" style={{...s.thumbn }} source={{ uri: `https://image.tmdb.org/t/p/original/${movie.poster_path}`}} />)
+        return (<Image onLoad={this._onLoad} resizeMode="contain" style={{...s.thumbn }} source={{ uri: `https://image.tmdb.org/t/p/w${width}/${movie.poster_path}`}} />)
     }
 
   render() {

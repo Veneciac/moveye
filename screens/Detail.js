@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, TouchableHighlight, Image, ScrollView } from 'react-native'
+import { Text, View, SafeAreaView, TouchableHighlight, Image, ScrollView, Dimensions } from 'react-native'
 import s from '../style'
 import { Icon, Fab, Badge } from 'native-base'
 
 import MovieCard from '../components/MovieCard'
+let width = 300
 
 //ACTIONS
 import { getDetail, getSimilar } from '../store/actions/movie'
@@ -37,7 +38,7 @@ class Detail extends Component {
         <ScrollView style={{ flex: 1 }}>
           <Text style={{...s.textWhite, fontSize: 21, fontWeight: '600', marginBottom: 8, marginHorizontal: 5, textAlign: 'center' }}> {detail.original_title} </Text>
 
-          <Image resizeMode="contain" style={{...s.detailImg }} source={{ uri: `https://image.tmdb.org/t/p/original/${detail.poster_path}`}} />
+          <Image resizeMode="contain" style={{...s.detailImg }} source={{ uri: `https://image.tmdb.org/t/p/w${width}/${detail.poster_path}`}} />
           <View style={{ marginHorizontal: 13}}>
             <Text style={{ textAlign: 'right', color: 'grey', fontSize: 15, marginRight: 5 }}> { detail.release_date } </Text>
             <Text style={{ ...s.textWhite, fontSize: 20, fontWeight: '500'}}>
